@@ -50,7 +50,8 @@ def play_game():
         if is_correct:
             score += 1
             print(f"You're right! Current score: {score}.")
-            account_a = account_b
+            while account_a == account_b:
+                account_b = random.choice(data)
             account_b = random.choice(data)
         else:
             game_should_continue = False
